@@ -1,0 +1,53 @@
+body {
+  padding: 0 2rem;
+}
+
+.container {
+  max-width: 80rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.header {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: #f9fdff;
+}
+
+.header img {
+  max-height: 20rem;
+}
+
+.title {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f4f5f6;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: #999;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+}
+
+#buttons .column {
+  text-align: center;
+}
+
+#grids .column span {
+  background: #d1d1d1;
+  border-radius: .4rem;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 3rem;
+  letter-spacing: .1rem;
+  line-height: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-transform: uppercase
+}

@@ -1,0 +1,81 @@
+{
+  "name": "minima.css",
+  "version": "0.1.0-alpha.1",
+  "description": "A personal minimalist CSS framework for myself, inspired by Mifa based on Milligram.",
+  "keywords": [
+    "minima",
+    "minima.css",
+    "zce"
+  ],
+  "homepage": "https://github.com/zce/minima.css#readme",
+  "bugs": {
+    "url": "https://github.com/zce/minima.css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/minima.css.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "zce",
+    "email": "w@zce.me",
+    "url": "https://zce.me"
+  },
+  "files": [
+    "dist",
+    "scss"
+  ],
+  "main": "dist/minima.css",
+  "directories": {
+    "lib": "scss",
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "csscomb scss",
+    "clean": "rimraf dist",
+    "compile:expanded": "sass scss/main.scss dist/minima.css",
+    "compile:compressed": "sass scss/main.scss dist/minima.min.css -s compressed",
+    "compile": "run-p compile:*",
+    "postcss": "postcss -r dist/*.css",
+    "build": "run-s clean compile postcss",
+    "watch": "onchange scss -- run-s compile postcss",
+    "serve": "browser-sync start -s docs --ss dist -f dist --no-notify",
+    "dev": "run-p watch serve",
+    "test": "ava"
+  },
+  "browserslist": [
+    "last 1 major version",
+    ">= 1%",
+    "Chrome >= 45",
+    "Firefox >= 38",
+    "Edge >= 12",
+    "Explorer >= 10",
+    "iOS >= 9",
+    "Safari >= 9",
+    "Android >= 4.4",
+    "Opera >= 30"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "ava": "^1.4.1",
+    "browser-sync": "^2.26.5",
+    "csscomb": "^4.3.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.0.0",
+    "postcss-cli": "^6.1.2",
+    "rimraf": "^2.6.3",
+    "sass": "^1.20.3"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}

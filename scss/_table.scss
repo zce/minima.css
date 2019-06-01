@@ -1,0 +1,76 @@
+// Table
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+/* stylelint-disable no-descending-specificity */
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 0.1rem solid $color-quinary;
+  text-align: left;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  table {
+    display: flex;
+    width: 100%;
+    border-spacing: 0;
+
+    td,
+    th {
+      display: block;
+
+      &:first-child {
+        padding-left: 1.2rem;
+      }
+
+      &:last-child {
+        padding-right: 1.2rem;
+      }
+    }
+
+    thead {
+      border-right: solid 0.1rem $color-quinary;
+
+      td,
+      th {
+        padding-left: 0;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 1.2rem;
+        }
+      }
+    }
+
+    tbody {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+
+      tr {
+        border-right: solid 0.1rem $color-quinary;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
