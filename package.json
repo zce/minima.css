@@ -37,11 +37,11 @@
     "compile:expanded": "sass scss/main.scss dist/minima.css",
     "compile:compressed": "sass scss/main.scss dist/minima.min.css -s compressed",
     "compile": "run-p compile:*",
-    "postcss": "postcss -r dist/*.css",
+    "postcss": "postcss dist/*.css -r",
     "build": "run-s clean compile postcss",
     "watch": "onchange scss -- run-s compile postcss",
-    "serve": "browser-sync start -s docs --ss dist -f dist --no-notify",
-    "dev": "run-p watch serve",
+    "serve": "browser-sync start -s docs --ss dist --ss . -f dist --no-notify",
+    "dev": "run-p build watch serve",
     "test": "ava"
   },
   "browserslist": [
