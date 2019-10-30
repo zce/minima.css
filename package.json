@@ -73,7 +73,7 @@
     "onchange": "6.1.0",
     "postcss-cli": "6.1.3",
     "rimraf": "3.0.0",
-    "sass": "1.23.0"
+    "sass": "1.23.2"
   },
   "engines": {
     "node": ">=6"
