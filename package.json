@@ -65,7 +65,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "9.7.1",
+    "autoprefixer": "9.7.2",
     "ava": "2.4.0",
     "browser-sync": "2.26.7",
     "csscomb": "4.3.0",
